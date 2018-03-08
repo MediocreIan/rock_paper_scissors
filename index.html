@@ -2,13 +2,56 @@
 <html>
 <head>
 	<title>
-		
+		GAME TIME!
 	</title>
 </head>
 <body>
 	<script type="text/javascript">
+		let choices = ["rock", "paper", "scissors"];
+		let computerChoice = computerPlay();
+		let playerChoice = playerSelection();
+		playerChoice = playerChoice.toLowerCase()
 		
-		
+		function computerPlay() {
+			return choices[Math.floor(Math.random() * choices.length)];
+		}
+
+		function playerSelection() {
+			return prompt("Rock, paper or scissors?")
+			
+		}
+		function playRound(player, computer) {
+			alert(computer)
+			if (player == "rock") {
+				if (computer == "rock") {
+					return "tie";
+				} else if (computer = "scissors") {
+					return "you Win!";
+				} else {
+					return "You lose"
+				}
+			}
+
+			 else if (player == "scissors") {
+				if (computer == "rock") {
+					return "You lose!";
+				} else if (computer = "scissors") {
+					return "Tie";
+				} else {
+					return "You win!"
+				}
+			}
+
+			 else {
+				if (computer == "rock") {
+					return "You Win!";
+				} else if (computer == "scissors") {
+					return "you lose!";
+				} else {
+					return "Tie"
+				}
+			}
+		};
 	</script>
 </body>
 </html>
